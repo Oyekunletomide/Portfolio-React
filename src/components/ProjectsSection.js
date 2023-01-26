@@ -10,8 +10,8 @@ const projects = [
      "Portfolio is a project that gives overview of me and projects I have built. It's built with functional React components and Chakra UI.",
    getImageSrc: () => require("../images/portfolio.jpg"),
     TechnologiesUsed: "React, Chakra UI",
-    Live: "https://github.com",
-    Repo: "https://github.com/Oyekunletomide/Ecommerce-React"
+    Live: "https://bespoke-entremet-04bbd4.netlify.app/",
+    Repo: "https://github.com/Oyekunletomide/Portfolio-React"
   },
   {
     title: "Ecommerce",
