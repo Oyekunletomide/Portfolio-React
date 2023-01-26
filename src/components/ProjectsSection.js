@@ -1,80 +1,64 @@
-import React from "react";
-import FullScreenSection from "./FullScreenSection";
-import { Box, Heading } from "@chakra-ui/react";
-import Card from "./Card";
-
-const projects = [
- {
-   title: "React Portfolio",
-   description:
-     "Portfolio is a project that gives overview of me and projects I have built. It's built with functional React components and Chakra UI.",
-   getImageSrc: () => require("../images/portfolio.jpg"),
-    TechnologiesUsed: "React, Chakra UI",
-    Live: "https://bespoke-entremet-04bbd4.netlify.app/",
-    Repo: "https://github.com/Oyekunletomide/Portfolio-React"
-  },
-  {
-    title: "Ecommerce",
-    description:
-      "This is an Ecommerce website built with React. It works with API. It has order system where you can pick the pictures you like, add to the cart and place am order to checkout.",
-    getImageSrc: () => require("../images/Ecoomerce.PNG"),
-    TechnologiesUsed: "React, Context-API, UseRef, API ",
-    Live: "https://beamish-fudge-d3a789.netlify.app/",
-    Repo: "https://github.com/Oyekunletomide/Ecommerce-React"
-   },
- {
-   title: "Color Scheme Generator",
-   description:
-     "An app that generates different colors from the API. Built with with HTML, CSS, and vanilla JavaScript.",
-   getImageSrc: () => require("../images/ColorGenerator.jpg"),
-   TechnologiesUsed: "HTML, CSS, JavaScript, API ",
-   Live: "https://willowy-halva-925029.netlify.app",
-   Repo: "https://github.com/Oyekunletomide/color-scheme-generator"
-  },
-
- {
-   title: "Simple working Calculator",
-   description:
-     "A simple calculator built with React",
-   getImageSrc: () => require("../images/calculator.PNG"),
-   TechnologiesUsed: "React, UseRef",
-   Live: "https://transcendent-treacle-9d26c7.netlify.app",
-   Repo: "https://github.com/Oyekunletomide/Simple-Working-Calculator-React"
-  },
-];
-
-const ProjectsSection = () => {
- return (
-   <FullScreenSection
-     backgroundColor="#14532d"
-     isDarkBackground
-     p={8}
-     alignItems="flex-start"
-     spacing={8}
-   >
-     <Heading as="h1" id="projects-section">
-       Featured Projects
-     </Heading>
-     <Box
-       display="grid"
-       gridTemplateColumns="repeat(2,minmax(0,1fr))"
-       gridGap={8}
-     >
-       {projects.map((project) => (
-         <Card
-           key={project.title}
-           title={project.title}
-           description={project.description}
+import React from "react"; 
+import FullScreenSection from "./FullScreenSection"; 
+import { Box, Heading } from "@chakra-ui/react"; 
+import Card from "./Card"; 
+ 
+const projects = [ 
+ { 
+   title: "React Space", 
+   description: 
+     "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️", 
+   getImageSrc: () => require("../images/photo1.jpg"), 
+ }, 
+ { 
+   title: "React Infinite Scroll", 
+   description: 
+     "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️", 
+   getImageSrc: () => require("../images/photo2.jpg"), 
+ }, 
+ { 
+   title: "Photo Gallery", 
+   description: 
+     "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income", 
+   getImageSrc: () => require("../images/photo3.jpg"), 
+ }, 
+ { 
+   title: "Event planner", 
+   description: 
+     "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps", 
+   getImageSrc: () => require("../images/photo4.jpg"), 
+ }, 
+]; 
+ 
+const ProjectsSection = () => { 
+ return ( 
+   <FullScreenSection 
+     backgroundColor="#14532d" 
+     isDarkBackground 
+     p={8} 
+     alignItems="flex-start" 
+     spacing={8} 
+   > 
+     <Heading as="h1" id="projects-section"> 
+       Featured Projects 
+     </Heading> 
+     <Box 
+       display="grid" 
+       gridTemplateColumns="repeat(2,minmax(0,1fr))" 
+       gridGap={8} 
+     > 
+       {projects.map((project) => ( 
+         <Card 
+           key={project.title} 
+           title={project.title} 
+           description={project.description} 
            url="https://github.com/rgommezz/react-native-offline" 
-           imageSrc={project.getImageSrc()}
-           TechnologiesUsed={project.TechnologiesUsed}
-           Live={project.Live}
-           Repo={project.Repo}
-         />
-       ))}
-     </Box>
-   </FullScreenSection>
- );
-};
-
+           imageSrc={project.getImageSrc()} 
+         /> 
+       ))} 
+     </Box> 
+   </FullScreenSection> 
+ ); 
+}; 
+ 
 export default ProjectsSection;
